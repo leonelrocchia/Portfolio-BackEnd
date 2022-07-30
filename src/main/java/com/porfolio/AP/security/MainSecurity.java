@@ -59,7 +59,7 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
                         "/education/**",
                         "/experience/**",
                         "/project/**",
-                        "skill/**"
+                        "/skill/**"
                 ).permitAll()
                 .anyRequest().authenticated().and().exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
