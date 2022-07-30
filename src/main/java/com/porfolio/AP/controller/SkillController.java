@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
 @RequestMapping("/skill")
+@RestController
 @CrossOrigin
 public class SkillController {
 
