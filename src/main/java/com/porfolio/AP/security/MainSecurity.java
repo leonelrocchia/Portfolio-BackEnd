@@ -56,10 +56,10 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable()
                 .authorizeRequests().antMatchers("/auth/**",
-                        "/education/**",
-                        "/experience/**",
-                        "/project/**",
-                        "skill/**"
+                        "/education/list/**",
+                        "/experience/list/**",
+                        "/project/list/**",
+                        "skill/list/**"
                 ).permitAll()
                 .anyRequest().authenticated().and().exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
